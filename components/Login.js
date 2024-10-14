@@ -80,7 +80,11 @@ const Login = () => {
         ) : (
           <CustomButton title="Login" onPress={handleLogin} />
         )}
+        <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')}>
+    <Text style={styles.registerLink}>Don't have an account? Register here</Text>
+  </TouchableOpacity>
       </View>
+      
     </View>
   );
 };
@@ -125,6 +129,11 @@ const styles = StyleSheet.create({
     height: 50,
     paddingHorizontal: 10,
     color: '#333', 
+  },
+  registerLink: {
+    color: '#007BFF',
+    marginTop: 10,
+    textAlign: 'center',
   },
 });
 
